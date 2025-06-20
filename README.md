@@ -141,7 +141,7 @@ Before starting, ensure you have:
 #### 🖥️ EC2 (Elastic Compute Cloud)
 
 - **Purpose:** Hosts the frontend, backend (Flask API), and MySQL database.
-- **Recommended Instance Type:** t2.micro or t3.micro (for testing/small scale)
+- **Recommended Instance Type:** t2.medium (for testing/small scale)
 - **Security Groups:**
   - Allow **SSH (port 22)** for access (restricted to your IP)
   - Allow **HTTP (port 80)** or **HTTPS (port 443)** for frontend
@@ -161,7 +161,7 @@ Before starting, ensure you have:
 #### 🔁 AWS Lambda
 
 - **Purpose:** Validates user data using LLM (OpenAI) and triggers email
-- **Runtime:** Python 3.8+
+- **Runtime:** Python 3.10+
 - **Trigger:** Can be invoked after DB insert or by the backend app
 
 ## 📚 Documentation
