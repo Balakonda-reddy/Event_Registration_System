@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Error</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f7f7f7; }
+        .container {
+            max-width: 500px;
+            margin: 100px auto;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(255,0,0,0.1);
+            padding: 40px 30px;
+            text-align: center;
+        }
+        .error {
+            color: #e74c3c;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        .info {
+            color: #555;
+            font-size: 1.1em;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="error">Registration Error</div>
+        <div class="info">{{ message }}</div>
+        <br>
+        <a href="/">Go back to registration</a>
+    </div>
+</body>
+</html> 

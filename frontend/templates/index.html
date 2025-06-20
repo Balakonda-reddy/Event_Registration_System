@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Registration</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Event Registration</h1>
+        <form id="registrationForm" action="/register" method="POST">
+            <div class="form-group">
+                <label for="name">Full Name *</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number *</label>
+                <input type="tel" id="phone" name="phone_number" required>
+            </div>
+
+            <div class="form-group">
+                <label for="designation">Designation *</label>
+                <select id="designation" name="designation" required>
+                    <option value="">Select Designation</option>
+                    <option value="DevOps Engineer">DevOps Engineer</option>
+                    <option value="Cloud Engineer">Cloud Engineer</option>
+                    <option value="SRE">SRE</option>
+                    <option value="Frontend Developer">Frontend Developer</option>
+                    <option value="Backend Developer">Backend Developer</option>
+                    <option value="Full Stack Developer">Full Stack Developer</option>
+                    <option value="Data Engineer">Data Engineer</option>
+                    <option value="Security Engineer">Security Engineer</option>
+                    <option value="QA Engineer">QA Engineer</option>
+                    <option value="System Administrator">System Administrator</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="experience">IT Experience *</label>
+                <select id="experience" name="it_experience" required>
+                    <option value="">Select Experience</option>
+                    <option value="Fresher">Fresher</option>
+                    <option value="0-2 years">0-2 years</option>
+                    <option value="2-5 years">2-5 years</option>
+                    <option value="5-7 years">5-7 years</option>
+                    <option value="7-10 years">7-10 years</option>
+                    <option value="10+ years">10+ years</option>
+                </select>
+            </div>
+
+            <button type="submit" class="submit-btn">Register</button>
+        </form>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    
+</body>
+</html> 
