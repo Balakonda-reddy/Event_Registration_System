@@ -32,24 +32,6 @@ This project addresses these issues by:
 Whether it's a tech event, bootcamp, or workshop, this app streamlines the registration process end-to-end — saving time for organizers and improving experience for participants.
 
 
-## 🌟 Features
-
-- **Interactive Registration Form**
-  - Drag-and-drop selection for designation and experience
-  - Form validation
-  - Responsive design
-
-- **Automated Validation**
-  - LLM-powered decision making
-  - Real-time validation of registrations
-  - Customizable validation criteria
-
-- **Email Notifications**
-  - Automated confirmation emails
-  - Decision-based email templates
-  - AWS SES integration
-
-
 ## 📝 Application Flow & Description
 
 
@@ -122,11 +104,6 @@ Before starting, ensure you have:
    - Configure environment variables
    - Start the application
 
-5. **Configure Frontend**
-   - Update API endpoints
-   - Configure form validation
-   - Test the integration
-
 ## ⚙️ Configuration
 
 ### Required Environment Variables
@@ -156,12 +133,12 @@ Before starting, ensure you have:
    SENDER_EMAIL=your_verified_ses_email
    ```
 
-### AWS Services Configuration
+
 
 ## ☁️ AWS Services Configuration
 
 
-### 🖥️ EC2 (Elastic Compute Cloud)
+#### 🖥️ EC2 (Elastic Compute Cloud)
 
 - **Purpose:** Hosts the frontend, backend (Flask API), and MySQL database.
 - **Recommended Instance Type:** t2.micro or t3.micro (for testing/small scale)
@@ -172,7 +149,7 @@ Before starting, ensure you have:
   - Allow **MySQL (port 3306)** to connect to the database
 
 
-### 🗃️ MySQL on EC2
+#### 🗃️ MySQL on EC2
 
 - **Purpose:** Stores user registration data
 - **Configuration:**
@@ -181,7 +158,7 @@ Before starting, ensure you have:
   - Allow access from Lambda/EC2 instance within the same VPC/security group
 - **Best Practice:** Use RDS for production and backups
 
-### 🔁 AWS Lambda
+#### 🔁 AWS Lambda
 
 - **Purpose:** Validates user data using LLM (OpenAI) and triggers email
 - **Runtime:** Python 3.8+
